@@ -35,10 +35,22 @@ function Symbol(x, y, speed) {
         fill(0, 255, 70);
         text(this.value, this.x, this.y);
         this.rain();
+        this.setToRandomSymbol();
     }
 
     this.rain = function() {
-        this.y += this.speed;
+        //when the symbol reaches the bottom it loops back 
+
+        //THIS IS THE LONG WAY OF WRITING THE CONDITION STATEMENT 
+
+        // if (this.y >= height) {
+        //     this.y = 0;
+        // } else {
+        //     this.y += this.speed;
+        // }
+
+        //SHORTCUT using ternary 
+        this.y = (this.y >= height) ? 0 : this.y += this.speed;
 
     }
 
