@@ -10,3 +10,17 @@ function setup() {
 function draw() {
 
 }
+
+function Symbol(x, y) {
+    this.x = x;
+    this.y = y;
+    this.value = value;
+
+    this.setToRandomSymbol = function() {
+
+    }
+}
+
+function Stream() {
+
+}
