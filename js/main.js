@@ -9,8 +9,7 @@ function setup() {
     background(0);
     symbol = new Symbol(
         width / 2,
-        height / 2,
-        random(5, 10)
+        0, 3, random(5, 10)
     );
     symbol.setToRandomSymbol();
     textSize(symbolSize);
