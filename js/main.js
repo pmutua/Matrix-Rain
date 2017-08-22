@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    background(0, 150);
     // render multiple streams
     streams.forEach(function(stream) {
         stream.render();
