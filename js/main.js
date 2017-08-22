@@ -8,10 +8,9 @@ function setup() {
     );
     background(0);
     var x = 0;
-    var y = 0;
     for (var i = 0; i <= width / symbolSize; i++) {
         var stream = new Stream();
-        stream.generateSymbols(x, y);
+        stream.generateSymbols(x, random(-1000, 0));
         streams.push(stream);
         x += symbolSize
     }
