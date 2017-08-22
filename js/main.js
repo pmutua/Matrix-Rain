@@ -1,4 +1,3 @@
-var symbol;
 var symbolSize = 60;
 
 function setup() {
@@ -7,11 +6,6 @@ function setup() {
         window.innerHeight
     );
     background(0);
-    symbol = new Symbol(
-        width / 2,
-        0, 3, random(5, 10)
-    );
-    symbol.setToRandomSymbol();
     textSize(symbolSize);
 }
 
@@ -36,12 +30,14 @@ function Symbol(x, y, speed) {
 
     }
 
-    this.render = function() {
-        fill(0, 255, 70);
-        text(this.value, this.x, this.y);
-        this.rain();
-        this.setToRandomSymbol();
-    }
+    //NO LONGER USING THIS DEFINED ANOTHER FUNCTION CALLED STREAMS TO HANDLE THIS
+
+    // this.render = function() {
+    //     fill(0, 255, 70);
+    //     text(this.value, this.x, this.y);
+    //     this.rain();
+    //     this.setToRandomSymbol();
+    // }
 
     this.rain = function() {
         //when the symbol reaches the bottom it loops back 
@@ -61,15 +57,32 @@ function Symbol(x, y, speed) {
 
 }
 
-
-
-
-
-
-
-
-
-
 function Stream() {
+    this.symbols = []
+    this.totalSymbols = round(random(5, 30));
+    this.speed = random(5, 20);
+
+
+    this.generateSymbols = function() {
+        var y = 0;
+        var x = width / 2;
+
+        for (var i = 0; i <= this.totalSymbols; i++) {
+            symbol = new Symbol(x, y, this.speed);
+            symbol.setToRandomSymbol();
+            this.symbols.push(symbol);
+            y -= symbolSize;
+        }
+    }
+
+    this.render = function() {
+        this.symbols.forEach(function(symbol) {
+            fill(0, 255, 70);
+            text(this.value, this.x, this.y);
+            symbol.rain();
+            symbol.setToRandomSymbol();
+
+        });
+    }
 
 }
