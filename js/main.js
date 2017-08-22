@@ -1,4 +1,5 @@
 var symbolSize = 60;
+var stream;
 
 function setup() {
     createCanvas(
@@ -6,12 +7,14 @@ function setup() {
         window.innerHeight
     );
     background(0);
+    stream = new Stream();
+    stream.generateSymbols();
     textSize(symbolSize);
 }
 
 function draw() {
     background(0);
-    symbol.render();
+    stream.render();
 
 }
 
@@ -76,9 +79,10 @@ function Stream() {
     }
 
     this.render = function() {
+        //add anonymous symbol in for each loop 
         this.symbols.forEach(function(symbol) {
             fill(0, 255, 70);
-            text(this.value, this.x, this.y);
+            text(symbol.value, symbol.x, symbol.y);
             symbol.rain();
             symbol.setToRandomSymbol();
 
