@@ -82,7 +82,7 @@ function Stream() {
         // Ive got rid of this hard coded code that i have commented 
         // var y = 0;
         // var x = width / 2;
-        var first = round(random(0, 1)) == 1;
+        var first = round(random(0, 4)) == 1;
         for (var i = 0; i <= this.totalSymbols; i++) {
             symbol = new Symbol(x, y, this.speed, first);
             symbol.setToRandomSymbol();
