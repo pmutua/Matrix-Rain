@@ -1,3 +1,5 @@
+var symbol;
+
 function setup() {
     createCanvas(
         window.innerWidth,
@@ -17,7 +19,12 @@ function Symbol(x, y) {
     this.value = value;
 
     this.setToRandomSymbol = function() {
+        this.value = String.fromCharCode(0x30A0 + round(0, 96))
 
+    }
+    this.render = function() {
+        fill(0, 255, 70);
+        text(this.value, this.x, this.y);
     }
 }
 
