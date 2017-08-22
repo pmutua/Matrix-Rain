@@ -29,12 +29,13 @@ function draw() {
 
 }
 
-function Symbol(x, y, speed) {
+function Symbol(x, y, speed, first) {
     this.x = x;
     this.y = y;
     this.value;
     this.speed = speed;
     this.switchInterval = round(random(2, 20));
+    this.first = first;
 
     this.setToRandomSymbol = function() {
         if (frameCount % this.switchInterval == 0) {
@@ -81,19 +82,25 @@ function Stream() {
         // Ive got rid of this hard coded code that i have commented 
         // var y = 0;
         // var x = width / 2;
-
+        var first = round(random(0, 1)) == 1;
         for (var i = 0; i <= this.totalSymbols; i++) {
-            symbol = new Symbol(x, y, this.speed);
+            symbol = new Symbol(x, y, this.speed, first);
             symbol.setToRandomSymbol();
             this.symbols.push(symbol);
             y -= symbolSize;
+            first = false;
         }
     }
 
     this.render = function() {
+
         //add anonymous symbol in for each loop 
         this.symbols.forEach(function(symbol) {
-            fill(0, 255, 70);
+            if (symbol.first) {
+                fill(180, 255, 180);
+            } else {
+                fill(0, 255, 70);
+            }
             text(symbol.value, symbol.x, symbol.y);
             symbol.rain();
             symbol.setToRandomSymbol();
