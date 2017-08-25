@@ -11,7 +11,7 @@
 </pre>
 
 # Matrix Rain 
-Rapport is a Customer Relations Management System that helps businesses boost their sales through keeping track of client's contact and also adding prospect customers.
+Animation of raining  katakana symbols just like in the Matrix movie. 
 
 # Author 
 Philip Mutua 
