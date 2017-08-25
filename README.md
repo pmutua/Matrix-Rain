@@ -9,3 +9,40 @@
  ÛÛÛÛÛ     ÛÛÛÛÛ°°ÛÛÛÛÛÛÛÛ  °°ÛÛÛÛÛ  ÛÛÛÛÛ     ÛÛÛÛÛ ÛÛÛÛÛ ÛÛÛÛÛ    ÛÛÛÛÛ   ÛÛÛÛÛ°°ÛÛÛÛÛÛÛÛ ÛÛÛÛÛ ÛÛÛÛ ÛÛÛÛÛ
 °°°°°     °°°°°  °°°°°°°°    °°°°°  °°°°°     °°°°° °°°°° °°°°°    °°°°°   °°°°°  °°°°°°°° °°°°° °°°° °°°°° 
 </pre>
+
+# Matrix Rain 
+Rapport is a Customer Relations Management System that helps businesses boost their sales through keeping track of client's contact and also adding prospect customers.
+
+# Author 
+Philip Mutua 
+
+## Getting Started and Installing
+
+
+* Clone this repo: `git clone https://github.com/pmutua/Matrix-Rain.git`
+* Run the app: `index.html`
+
+
+### Prerequisites
+
+```
+p5.JS
+
+
+```
+
+
+
+## Built With
+
+* p5.JS
+* HTML
+* JavaScript
+
+## Contributing
+
+Please read [CONTRIBUTING.md](#) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
